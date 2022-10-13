@@ -55,7 +55,7 @@ const topTruyen = async () => {
 const CloneDataFunction = async (pageObject) => {
   const browser = await puppeteer.launch({
     args: ["--no-sandbox"],
-    executablePath: '/usr/bin/google-chrome',
+    executablePath: `${__dirname}/node_modules/chromium/lib/chromium/chrome-win/chrome`,
     headless: true,
   });
   const page = await browser.newPage();
